@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh"> 
+  <title>标题</title>
+  <!-- <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script> -->
+  <link rel="stylesheet" href="./script/element.css">
+  <script src="./script/vue.js"></script>
+  <script src="./script/element.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <el-steps direction="vertical" :space="220" :active="active" finish-status="success">
+      <el-step title="身份信息" :description="active < 1 ? '身份信息提交中' : '身份信息提交成功'"></el-step>
+      <el-step title="工作信息" :description="active < 2 ? '工作信息提交中' : '工作信息提交成功'"></el-step>
+      <el-step title="联系人信息" :description="active < 3 ? '联系人信息提交中' : '联系人信息提交成功'"></el-step>
+      <el-step title="信用认证" :description="active < 4 ? '信用信息提交中' : '信用信息提交成功'"></el-step>
+      <el-step title="其他信息" :description="active < 5 ? '其他信息提交中' : '其他信息提交成功'"></el-step>
+      <el-step title="信息验证" :description="active < 6 ? '正在验证信息' : '信息验证成功'"></el-step>
+    </el-steps>
+  </div>
+ 
+</body>
+<script>
+  new Vue({
+    el: '#app',
+    mounted() {
+      this.getActive()
+    },
+    data: {
+      active: 1
+    },
+    methods: {
+      getActive() {
+        setInterval(
+          () => {
+            if (this.active < 6) {
+              this.active = this.active + 1
+            }
+          }, 1000
+        )
+      }
+      
+    }
+  });
+</script>
+<style>
+  .el-step__head.is-success {
+    color: #fd5f45;
+    border-color: #fd5f45;
+  }
+  .el-step.is-vertical .el-step__line {
+    width: 10px;
+    /* background-color: #1f94f1; */
+  }
+  .el-step.is-vertical .el-step__line.is-success {
+    width: 10px;
+ 
+  }
+  .el-step__line.is-process {
+    /* background-color: #1f94f1; */
+  }
+  .el-step__description.is-success {
+    color: #888;
+  }
+  .el-step__line-inner {
+    border-width: 5px !important;
+  }
+  .el-step__title.is-success {
+    color: #000;
+  }
+
+  .el-step__head.is-process {
+    color: #fd5f45;
+    border-color: #fd5f45;
+  }
+  .el-step.is-vertical .el-step__line {
+    left: 55px;
+  }
+  .el-step__icon.is-text {
+    width: 120px;
+    height: 120px;
+  }
+  /* .el-step__icon.is-text  {
+    border: 8px solid #1f94f1 ;
+  } */
+
+  .el-step__icon.is-text{
+    border: 12px solid transparent;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    border-radius: 50%;
+    background:linear-gradient(to right,#fb5949, #fd7f3e) 30% 30%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 0px;
+}
+.el-step__icon.is-text::after{
+  position: absolute;
+  content: '';
+  background: white;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transform: scale(1.1);
+  border-radius: 50%;
+}
+  .el-step__icon {
+    font-size: 60px;
+  }
+  .el-step__main {
+    margin-left: 20px;
+  }
+  .el-steps--vertical {
+    width: 100%;
+    height: 50%;
+    /* margin-left: 20%; */
+    margin-top: 20%;
+    margin-left: -20%;
+    margin-top: 40px;
+    /* background: yellowgreen */
+    /* margin-left: 20px;
+    margin-top: 20px; */
+  }
+  .el-step__title {
+    font-size: 45px;
+    margin-left: 15%;
+  }
+  .el-step__title.is-success {
+    font-size: 60px;
+    /* font-weight: bold; */
+  }
+  .el-step__description {
+    font-size: 35px;
+    color: #f1f1f1;
+    margin-left: 15%;
+    line-height: 35px;
+  }
+  .el-step.is-vertical .el-step__title {
+    line-height: 75px;
+  }
+  .el-step.is-vertical .el-step__head {
+    margin-left: 25%;
+  }
+</style>
+
+</html>

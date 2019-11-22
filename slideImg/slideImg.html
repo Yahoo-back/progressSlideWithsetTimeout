@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+    <meta name="description" content="">
+		<meta name="author" content="">
+		<script type="text/javascript" src="./js/jquery.min.js"></script>
+		<script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+    <style>
+			body{
+				background: #f6f6f6;
+			}
+			img {
+				width: 100%;
+				height: 100%;
+			}
+			#img1 {
+				width: 90%;
+				margin-left: 5%;
+				display: none;
+			}
+			#img2 {
+				width: 90%;
+				margin-left: 5%;
+				display: none;
+				margin-top: 25px;
+			}
+			#img3 {
+				width: 90%;
+				margin-left: 5%;
+				display: none;
+				margin-top: 25px;
+			}
+			#img4 {
+				width: 90%;
+				margin-left: 5%;
+				display: none;
+				margin-top: 25px;
+			}
+    </style>
+</head>
+
+<body>
+	<div id="img1">
+		<img src="./img/img1.png">
+	</div>
+	<div id="img2">
+		<img src="./img/img2.png">
+	</div>
+	<div id="img3">
+		<img src="./img/img3.png">
+	</div>
+	<div id="img4">
+		<img src="./img/img4.png">
+	</div>
+	<script language="javascript" type="text/javascript">
+	  window.onload=function(){ 
+			setTimeout(function() {
+				$("#img1").fadeIn()
+			},100)
+			setTimeout(function() {
+				$("#img2").fadeIn()
+			},800)
+			setTimeout(function() {
+				$("#img3").fadeIn()
+			},1500)
+			setTimeout(function() {
+				$("#img4").fadeIn()
+			},2200)
+		}
+	</script>
+</body>
+
+</html>
