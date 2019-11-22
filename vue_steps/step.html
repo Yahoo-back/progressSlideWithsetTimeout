@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh"> 
+  <meta http-equiv="refresh" content="6;URL=http://www.baidu.com"> 
   <title>标题</title>
   <!-- <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
@@ -17,7 +17,7 @@
   <div id="app">
     <el-steps direction="vertical" :space="220" :active="active" finish-status="success">
       <el-step title="身份信息" :description="active < 1 ? '身份信息提交中' : '身份信息提交成功'"></el-step>
-      <el-step title="工作信息" :description="active < 2 ? '工作信息提交中' : '工作信息提交成功'"></el-step>
+      <el-step title="银行卡信息" :description="active < 2 ? '银行卡信息提交中' : '银行卡信息提交成功'"></el-step>
       <el-step title="联系人信息" :description="active < 3 ? '联系人信息提交中' : '联系人信息提交成功'"></el-step>
       <el-step title="信用认证" :description="active < 4 ? '信用信息提交中' : '信用信息提交成功'"></el-step>
       <el-step title="其他信息" :description="active < 5 ? '其他信息提交中' : '其他信息提交成功'"></el-step>

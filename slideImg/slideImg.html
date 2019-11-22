@@ -3,6 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta http-equiv="refresh" content="4.5;URL=http://www.baidu.com"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
@@ -45,32 +46,30 @@
 </head>
 
 <body>
-	<div id="img1">
-		<img src="./img/img1.png">
-	</div>
-	<div id="img2">
-		<img src="./img/img2.png">
-	</div>
-	<div id="img3">
-		<img src="./img/img3.png">
-	</div>
-	<div id="img4">
-		<img src="./img/img4.png">
+	<div id="main">
+		<img id="img1" src="./img/img1.png">
+		<img id="img2" src="./img/img2.png">
+		<img id="img3" src="./img/img3.png">
+		<img id="img4" src="./img/img4.png">
 	</div>
 	<script language="javascript" type="text/javascript">
+	
 	  window.onload=function(){ 
-			setTimeout(function() {
+	
+		
+			setInterval(function() {
 				$("#img1").fadeIn()
-			},100)
-			setTimeout(function() {
+			},1000)
+			setInterval(function() {
 				$("#img2").fadeIn()
-			},800)
-			setTimeout(function() {
+			},2000)
+			setInterval(function() {
 				$("#img3").fadeIn()
-			},1500)
-			setTimeout(function() {
+			},3000)
+			setInterval(function() {
 				$("#img4").fadeIn()
-			},2200)
+			},4000)
+			// window.location = "http://www.webkaka.com/";
 		}
 	</script>
 </body>
